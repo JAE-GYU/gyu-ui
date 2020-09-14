@@ -2,7 +2,7 @@ import {
   PropType,
   computed,
 } from "vue";
-import { GYU_UI_SIZE, GYU_UI_KIND } from "@/types/gyu-ui";
+import { GYU_UI_SIZE, GYU_UI_KIND } from "../types/gyu-ui";
 
 const kindProps = {
   kind: {

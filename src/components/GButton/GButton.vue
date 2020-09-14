@@ -11,8 +11,8 @@ import {
   sizeProps,
   kindProps,
   statusProps,
-  useComponentClasses
-} from "@/composables/commonComponent";
+  useComponentClasses,
+} from "../../composables/commonComponent";
 import { defineComponent, PropType, computed } from "vue";
 export default defineComponent({
   name: "g-button",
@@ -25,28 +25,28 @@ export default defineComponent({
       default: "button",
       validator: (val: string) => {
         return ["button", "submit", "reset"].includes(val);
-      }
+      },
     },
     prefixIcon: {
       type: String,
-      default: undefined
+      default: undefined,
     },
     suffixIcon: {
       type: String,
-      default: undefined
+      default: undefined,
     },
     ghost: {
       type: Boolean,
-      default: false
+      default: false,
     },
     circle: {
       type: Boolean,
-      default: false
+      default: false,
     },
     rounded: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup(props, { emit }) {
     const { sizableClasses, statusClasses } = useComponentClasses(props);
@@ -56,7 +56,7 @@ export default defineComponent({
         return {
           "g-btn-ghost": props.ghost,
           "g-btn-circle": props.circle,
-          "g-btn-rounded": props.rounded
+          "g-btn-rounded": props.rounded,
         };
       }
     );
@@ -64,9 +64,9 @@ export default defineComponent({
     return {
       sizableClasses,
       statusClasses,
-      btnClasses
+      btnClasses,
     };
-  }
+  },
 });
 </script>
 
