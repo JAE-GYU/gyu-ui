@@ -19,9 +19,9 @@ export default defineComponent({
     };
 
     return {
-      handleClick
+      handleClick,
     };
-  }
+  },
 });
 </script>
 
