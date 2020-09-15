@@ -6,7 +6,7 @@
     <span class="button__text">
       <slot></slot>
     </span>
-    <span v-if="suffixIcon" class="button__icon suffix-icon">
+    <span v-if="suffixIcon && !circle" class="button__icon suffix-icon">
       <i :class="suffixIcon"></i>
     </span>
   </button>
