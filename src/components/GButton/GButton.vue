@@ -1,19 +1,26 @@
 <template>
-  <button :class="[sizableClasses, statusClasses, btnClasses]">
-    <i v-if="prefixIcon" :class="prefixIcon"></i>
-    <slot></slot>
-    <i v-if="suffixIcon" :class="suffixIcon"></i>
+  <button class="g-button" :class="[btnClasses, sizableClasses, statusClasses]">
+    <span v-if="prefixIcon" class="button__icon prefix-icon">
+      <i :class="prefixIcon"></i>
+    </span>
+    <span class="button__text">
+      <slot></slot>
+    </span>
+    <span v-if="suffixIcon" class="button__icon suffix-icon">
+      <i :class="suffixIcon"></i>
+    </span>
   </button>
 </template>
 
 <script lang="ts">
+import "./GButton.scss";
 import {
   sizeProps,
   kindProps,
   statusProps,
   useComponentClasses,
 } from "../../composables/commonComponent";
-import { defineComponent, PropType, computed } from "vue";
+import { defineComponent, computed } from "vue";
 export default defineComponent({
   name: "g-button",
   props: {
@@ -35,6 +42,10 @@ export default defineComponent({
       type: String,
       default: undefined,
     },
+    link: {
+      type: Boolean,
+      default: false,
+    },
     ghost: {
       type: Boolean,
       default: false,
@@ -48,15 +59,17 @@ export default defineComponent({
       default: false,
     },
   },
-  setup(props, { emit }) {
+  setup(props) {
     const { sizableClasses, statusClasses } = useComponentClasses(props);
 
     const btnClasses = computed(
       (): Record<string, boolean> => {
         return {
-          "g-btn-ghost": props.ghost,
-          "g-btn-circle": props.circle,
-          "g-btn-rounded": props.rounded,
+          "is-link": props.link,
+          "is-ghost": props.ghost,
+          "is-circle": props.circle,
+          "is-rounded": props.rounded,
+          [`g-button--${props.kind}`]: true,
         };
       }
     );
@@ -69,5 +82,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss" scoped></style>

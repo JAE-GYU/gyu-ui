@@ -21,6 +21,7 @@ export enum GYU_UI_KIND {
   DEFAULT = "default",
   PRIMARY = "primary",
   SECONDARY = "secondary",
+  SUCCESS = "success",
   WARNING = "warning",
   ERROR = "error",
 };

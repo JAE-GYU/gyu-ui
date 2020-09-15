@@ -4,6 +4,7 @@ import {
 } from "vue";
 import { GYU_UI_SIZE, GYU_UI_KIND } from "../types/gyu-ui";
 
+/* props */
 const kindProps = {
   kind: {
     type: String as PropType<GYU_UI_KIND>,
@@ -39,6 +40,7 @@ const statusProps = {
   }
 }
 
+/* composables */
 const useComponentClasses = (props: any) => {
   const sizableClasses = computed((): Record<string, boolean> => {
     return {

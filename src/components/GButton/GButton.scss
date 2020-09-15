@@ -1,0 +1,106 @@
+@import "../../globals/gyu_colors.scss";
+
+@mixin buttonMixin ($kind, $background-color, $outline-color, $font-color, $active-color, $hover-color, $focus-color){
+  &--#{$kind} {
+    background: $background-color;    
+    color: $font-color;    
+
+    &.is-ghost {    
+      background: none;
+      border: 1px solid $outline-color;
+      color: $outline-color;
+      &:hover, focus {
+        background: $background-color;
+        color: $font-color;
+      }
+
+      &:active {
+        background: $active-color;
+      }
+    }
+
+    &.is-link {    
+      background: none;
+      border: none;
+      color: $outline-color;
+      &:hover, &:focus {
+        background: $-color-light;        
+      }
+      
+      &:active {
+        background: $-color-gray;
+      }
+    }
+
+    &:hover {
+      background: $hover-color;
+    }
+    
+    &:focus {
+      background: $focus-color;
+    }
+
+    &:active {
+      background: $active-color;
+    }
+  }
+}
+
+/* GButton styles */
+.g-button {
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #32353A;
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: .375rem;
+  box-sizing: border-box;  
+  outline: none;
+  transition: .2s;
+  cursor: pointer;
+
+  .button__icon + .button__text {
+    margin-left: 6px;
+  }
+
+  .button__text + .button__icon {
+    margin-left: 6px;
+  }
+
+  /* kind */  
+  @include buttonMixin("default", $-color-default, $-color-default-outline, $-color-text, $-color-default-active, $-color-default-hover, $-color-default-focus);
+  @include buttonMixin("primary", $-color-primary, $-color-primary, $-color-text-invert, $-color-primary-active, $-color-primary-hover, $-color-primary-focus);
+  @include buttonMixin("secondary", $-color-secondary, $-color-secondary, $-color-text-invert, $-color-secondary-active, $-color-secondary-hover, $-color-secondary-focus);
+  @include buttonMixin("success", $-color-success, $-color-success, $-color-text-invert, $-color-success-active, $-color-success-hover, $-color-success-focus);
+  @include buttonMixin("warning", $-color-warning, $-color-warning, $-color-text-invert, $-color-warning-active, $-color-warning-hover, $-color-warning-focus);
+  @include buttonMixin("error", $-color-error, $-color-error, $-color-text-invert, $-color-error-active, $-color-error-hover, $-color-error-focus);
+
+  /* shape */
+  &.is-ghost {
+    background: none;
+  }
+
+  &.is-rounded {
+    border-radius: 99em;
+    padding: 0 0.75rem;
+  }
+
+  &.is-circle {    
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding: 0 0.5rem;
+    .button__text {
+      margin: 0;
+    }
+    
+    .button__icon, i, svg {     
+      width: 0.875rem;
+      height: 0.875rem;
+      margin: 0;
+    }
+  }  
+}

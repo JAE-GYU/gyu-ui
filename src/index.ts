@@ -1,4 +1,4 @@
-import { GyuUIOptions } from "@/types/gyu-ui";
+import { GyuUIOptions } from "./types/gyu-ui";
 
 import { App } from "vue";
 import * as components from "./components";
