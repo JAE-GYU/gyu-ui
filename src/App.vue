@@ -1,4 +1,5 @@
 <template>
+  <h1>{{ count }}</h1>
   <div class="g-button__wrap">
     <h2>Basic Button</h2>
     <g-button
@@ -266,20 +267,69 @@
       @click="handleClick"
     ></g-button>
   </div>
+
+  <div class="g-button__wrap">
+    <h2>Button Status</h2>
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      disabled
+      @click="handleClick"
+    >disabled</g-button>
+
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      :skeleton="skeleton"
+      @click="handleClick"
+    >skeleton</g-button>
+
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      loading
+      @click="handleClick"
+    >skeleton</g-button>
+
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      circle
+      loading
+      @click="handleClick"
+    >skeleton</g-button>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 
 export default defineComponent({
   name: "App",
   setup() {
-    const handleClick = (): void => {
-      alert("Button Clicked!");
+    const count = ref(0);
+
+    const handleClick = (e: MouseEvent): void => {
+      count.value += 1;
+      console.log("Click", e.target);
     };
+
+    const skeleton = ref(true);
+
+    onMounted(() => {
+      setInterval(() => {
+        skeleton.value = !skeleton.value;
+      }, 3000);
+    });
 
     return {
       handleClick,
+      skeleton,
+      count,
     };
   },
 });

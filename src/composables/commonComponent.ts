@@ -53,9 +53,9 @@ const useComponentClasses = (props: any) => {
 
   const statusClasses = computed((): Record<string, boolean> => {
     return {
-      'is--disabled': props.disabled,
-      'is--loading': props.loading,
-      'is--skeleton': props.skeleton,
+      'is-disabled': props.disabled,
+      'is-loading': props.loading,
+      'is-skeleton': props.skeleton,
     }
   });
 

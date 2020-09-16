@@ -1,5 +1,7 @@
 $-color-gray: #f0f0f0;
 $-color-light: #f3f4f7;
+$-color-skeleton: #e1e4ef;
+$-color-skeleton-darken: darken($-color-skeleton, 5%);
 
 $-color-text: #32353A;
 $-color-text-invert: #fff;

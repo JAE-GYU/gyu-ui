@@ -1,14 +1,21 @@
 <template>
-  <button class="g-button" :class="[btnClasses, sizableClasses, statusClasses]">
-    <span v-if="prefixIcon" class="button__icon prefix-icon">
-      <i :class="prefixIcon"></i>
-    </span>
-    <span v-if="!circle" class="button__text">
-      <slot></slot>
-    </span>
-    <span v-if="suffixIcon && !circle" class="button__icon suffix-icon">
-      <i :class="suffixIcon"></i>
-    </span>
+  <button
+    class="g-button"
+    :class="[btnClasses, sizableClasses, statusClasses]"
+    :disabled="disabled || loading || skeleton"
+    @click.capture="handleClick"
+  >
+    <template v-if="!skeleton">
+      <span v-if="prefixIcon && !loading" class="button__icon prefix-icon">
+        <i :class="prefixIcon"></i>
+      </span>
+      <span v-if="!circle" class="button__text">
+        <slot></slot>
+      </span>
+      <span v-if="(suffixIcon && !circle) || loading" class="button__icon suffix-icon">
+        <i :class="suffixIconClass"></i>
+      </span>
+    </template>
   </button>
 </template>
 
@@ -23,6 +30,7 @@ import {
 import { defineComponent, computed } from "vue";
 export default defineComponent({
   name: "g-button",
+  inheritAttrs: false,
   props: {
     ...sizeProps,
     ...kindProps,
@@ -59,7 +67,7 @@ export default defineComponent({
       default: false,
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const { sizableClasses, statusClasses } = useComponentClasses(props);
 
     const btnClasses = computed(
@@ -74,10 +82,26 @@ export default defineComponent({
       }
     );
 
+    const suffixIconClass = computed((): string => {
+      return props.loading ? "fa fa-spinner fa-spin" : props.suffixIcon;
+    });
+
+    const handleClick = (ev: MouseEvent) => {
+      if (props.disabled || props.loading || props.skeleton) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        ev.stopImmediatePropagation();
+      } else {
+        emit("click", ev);
+      }
+    };
+
     return {
       sizableClasses,
       statusClasses,
       btnClasses,
+      suffixIconClass,
+      handleClick,
     };
   },
 });
