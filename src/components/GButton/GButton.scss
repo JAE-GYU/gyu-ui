@@ -85,6 +85,10 @@
     &.is-rounded {      
       padding: 0 0.5rem;
     }
+    
+    &.is-skeleton {
+      width: 4rem;
+    }
 
     &.is-circle {
       width: 1.5rem;
@@ -92,10 +96,6 @@
         width: 0.75rem;
         height: 0.75rem;        
       }
-    }
-
-    &.is-skeleton {
-      width: 4rem;
     }
   }
 
@@ -107,12 +107,12 @@
       padding: 0 0.75rem;
     }
     
-    &.is-circle {
-      width: 1.75rem;
-    }
-
     &.is-skeleton {
       width: 5rem;
+    }
+
+    &.is-circle {
+      width: 1.75rem;
     }
   }
 
@@ -124,13 +124,14 @@
       padding: 0 0.75rem;
     }
 
+    &.is-skeleton {
+      width: 5.25rem;
+    }
+
     &.is-circle {
       width: 2.25rem;
     }
 
-    &.is-skeleton {
-      width: 5.25rem;
-    }
   }
 
   &.g-size--large {
@@ -142,12 +143,12 @@
       padding: 0 1rem;
     }
 
-    &.is-circle {
-      width: 2.75rem;
-    }
-
     &.is-skeleton {
       width: 5.75rem;
+    }
+
+    &.is-circle {
+      width: 2.75rem;
     }
   }
 
