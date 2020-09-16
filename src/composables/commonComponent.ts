@@ -1,8 +1,5 @@
-import {
-  PropType,
-  computed,
-} from "vue";
-import { GYU_UI_SIZE, GYU_UI_KIND } from "../types/gyu-ui";
+import { PropType, computed } from "vue";
+import { GYU_UI_SIZE, GYU_UI_KIND } from "@/types/gyu-ui";
 
 /* props */
 const kindProps = {
@@ -12,8 +9,8 @@ const kindProps = {
     validator: (val: GYU_UI_KIND) => {
       return Object.values(GYU_UI_KIND).includes(val);
     }
-  },
-}
+  }
+};
 
 const sizeProps = {
   size: {
@@ -22,8 +19,8 @@ const sizeProps = {
     validator: (val: GYU_UI_SIZE) => {
       return Object.values(GYU_UI_SIZE).includes(val);
     }
-  },
-}
+  }
+};
 
 const statusProps = {
   disabled: {
@@ -38,36 +35,35 @@ const statusProps = {
     type: Boolean,
     default: false
   }
-}
+};
 
 /* composables */
 const useComponentClasses = (props: any) => {
-  const sizableClasses = computed((): Record<string, boolean> => {
-    return {
-      'g-size--mini': props.size === GYU_UI_SIZE.MINI,
-      'g-size--small': props.size === GYU_UI_SIZE.SMALL,
-      'g-size--medium': props.size === GYU_UI_SIZE.MEDIUM,
-      'g-size--large': props.size === GYU_UI_SIZE.LARGE,
+  const sizableClasses = computed(
+    (): Record<string, boolean> => {
+      return {
+        "g-size--mini": props.size === GYU_UI_SIZE.MINI,
+        "g-size--small": props.size === GYU_UI_SIZE.SMALL,
+        "g-size--medium": props.size === GYU_UI_SIZE.MEDIUM,
+        "g-size--large": props.size === GYU_UI_SIZE.LARGE
+      };
     }
-  });
+  );
 
-  const statusClasses = computed((): Record<string, boolean> => {
-    return {
-      'is-disabled': props.disabled,
-      'is-loading': props.loading,
-      'is-skeleton': props.skeleton,
+  const statusClasses = computed(
+    (): Record<string, boolean> => {
+      return {
+        "is-disabled": props.disabled,
+        "is-loading": props.loading,
+        "is-skeleton": props.skeleton
+      };
     }
-  });
+  );
 
   return {
     sizableClasses,
-    statusClasses,
-  }
-}
+    statusClasses
+  };
+};
 
-export {
-  sizeProps,
-  kindProps,
-  statusProps,
-  useComponentClasses
-}
+export { sizeProps, kindProps, statusProps, useComponentClasses };

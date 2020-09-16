@@ -1,9 +1,9 @@
-import { GyuUIOptions } from "./types/gyu-ui";
+import { GyuUIOptions } from "@/types/gyu-ui";
 
 import { App } from "vue";
 import * as components from "./components";
-import '../node_modules/@fortawesome/fontawesome-free/js/all.min.js';
-import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/js/all.min.js";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default {
   install(app: App, options: GyuUIOptions) {

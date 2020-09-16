@@ -12,7 +12,10 @@
       <span v-if="!circle" class="button__text">
         <slot></slot>
       </span>
-      <span v-if="(suffixIcon && !circle) || loading" class="button__icon suffix-icon">
+      <span
+        v-if="(suffixIcon && !circle) || loading"
+        class="button__icon suffix-icon"
+      >
         <i :class="suffixIconClass"></i>
       </span>
     </template>
@@ -25,8 +28,8 @@ import {
   sizeProps,
   kindProps,
   statusProps,
-  useComponentClasses,
-} from "../../composables/commonComponent";
+  useComponentClasses
+} from "@/composables/commonComponent";
 import { defineComponent, computed } from "vue";
 export default defineComponent({
   name: "g-button",
@@ -40,32 +43,32 @@ export default defineComponent({
       default: "button",
       validator: (val: string) => {
         return ["button", "submit", "reset"].includes(val);
-      },
+      }
     },
     prefixIcon: {
       type: String,
-      default: undefined,
+      default: undefined
     },
     suffixIcon: {
       type: String,
-      default: undefined,
+      default: undefined
     },
     link: {
       type: Boolean,
-      default: false,
+      default: false
     },
     ghost: {
       type: Boolean,
-      default: false,
+      default: false
     },
     circle: {
       type: Boolean,
-      default: false,
+      default: false
     },
     rounded: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   setup(props, { emit }) {
     const { sizableClasses, statusClasses } = useComponentClasses(props);
@@ -77,7 +80,7 @@ export default defineComponent({
           "is-ghost": props.ghost,
           "is-circle": props.circle,
           "is-rounded": props.rounded,
-          [`g-button--${props.kind}`]: true,
+          [`g-button--${props.kind}`]: true
         };
       }
     );
@@ -101,8 +104,8 @@ export default defineComponent({
       statusClasses,
       btnClasses,
       suffixIconClass,
-      handleClick,
+      handleClick
     };
-  },
+  }
 });
 </script>

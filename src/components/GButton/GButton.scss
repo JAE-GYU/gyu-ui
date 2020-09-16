@@ -1,4 +1,4 @@
-@import "../../globals/gyu_colors.scss";
+@import "@/globals/gyu_colors.scss";
 
 /* button mixin */
 @mixin buttonMixin ($kind, $background-color, $outline-color, $font-color, $active-color, $hover-color, $focus-color){
