@@ -11,7 +11,7 @@ $-color-primary: #5f5fff;
 $-color-secondary: #3e4149;
 $-color-success: #3fca45;
 $-color-warning: #ff9200;
-$-color-error: #ff5454;
+$-color-danger: #ff5454;
 
 $-color-default-outline: #32353A;
 $-color-default-lighten-05: lighten($-color-default, 5%);
@@ -69,13 +69,13 @@ $-color-warning-active: $-color-warning-darken-05;
 $-color-warning-hover: $-color-warning-lighten-05;
 $-color-warning-focus: $-color-warning-lighten-05;
 
-$-color-error-lighten-05: lighten($-color-error, 5%);
-$-color-error-lighten-10: lighten($-color-error, 10%);
-$-color-error-lighten-20: lighten($-color-error, 20%);
-$-color-error-darken-05: darken($-color-error, 05%);
-$-color-error-darken-10: darken($-color-error, 10%);
-$-color-error-darken-20: darken($-color-error, 20%);
+$-color-danger-lighten-05: lighten($-color-danger, 5%);
+$-color-danger-lighten-10: lighten($-color-danger, 10%);
+$-color-danger-lighten-20: lighten($-color-danger, 20%);
+$-color-danger-darken-05: darken($-color-danger, 05%);
+$-color-danger-darken-10: darken($-color-danger, 10%);
+$-color-danger-darken-20: darken($-color-danger, 20%);
 
-$-color-error-active: $-color-error-darken-05;
-$-color-error-hover: $-color-error-lighten-05;
-$-color-error-focus: $-color-error-lighten-05;
+$-color-danger-active: $-color-danger-darken-05;
+$-color-danger-hover: $-color-danger-lighten-05;
+$-color-danger-focus: $-color-danger-lighten-05;

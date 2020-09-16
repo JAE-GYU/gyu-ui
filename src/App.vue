@@ -7,53 +7,84 @@
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >default</g-button>
+      @mouseover="() => (count += 1)"
+      >default</g-button
+    >
 
     <g-button
       kind="primary"
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >primary</g-button>
+      >primary</g-button
+    >
 
     <g-button
       kind="secondary"
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >secondary</g-button>
+      >secondary</g-button
+    >
 
     <g-button
       kind="success"
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >success</g-button>
+      >success</g-button
+    >
 
     <g-button
       kind="warning"
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >warning</g-button>
+      >warning</g-button
+    >
 
-    <g-button kind="error" prefix-icon="fa fa-plus-square" size="medium" @click="handleClick">error</g-button>
+    <g-button
+      kind="danger"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      @click="handleClick"
+      >danger</g-button
+    >
   </div>
 
   <div class="g-button__wrap">
     <h2>Button Size</h2>
-    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="mini" @click="handleClick">mini</g-button>
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="mini"
+      @click="handleClick"
+      >mini</g-button
+    >
 
-    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="small" @click="handleClick">small</g-button>
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="small"
+      @click="handleClick"
+      >small</g-button
+    >
 
     <g-button
       kind="primary"
       prefix-icon="fa fa-plus-square"
       size="medium"
       @click="handleClick"
-    >medium</g-button>
+      >medium</g-button
+    >
 
-    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="large" @click="handleClick">large</g-button>
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="large"
+      @click="handleClick"
+      >large</g-button
+    >
   </div>
 
   <div class="g-button__wrap">
@@ -64,7 +95,8 @@
       size="mini"
       rounded
       @click="handleClick"
-    >default</g-button>
+      >default</g-button
+    >
 
     <g-button
       kind="primary"
@@ -72,7 +104,8 @@
       size="small"
       rounded
       @click="handleClick"
-    >primary</g-button>
+      >primary</g-button
+    >
 
     <g-button
       kind="secondary"
@@ -80,7 +113,8 @@
       size="medium"
       rounded
       @click="handleClick"
-    >secondary</g-button>
+      >secondary</g-button
+    >
 
     <g-button
       kind="success"
@@ -88,7 +122,8 @@
       size="large"
       rounded
       @click="handleClick"
-    >success</g-button>
+      >success</g-button
+    >
 
     <g-button
       kind="warning"
@@ -96,15 +131,17 @@
       size="medium"
       rounded
       @click="handleClick"
-    >warning</g-button>
+      >warning</g-button
+    >
 
     <g-button
-      kind="error"
+      kind="danger"
       prefix-icon="fa fa-plus-square"
       size="medium"
       rounded
       @click="handleClick"
-    >error</g-button>
+      >danger</g-button
+    >
   </div>
 
   <div class="g-button__wrap">
@@ -149,7 +186,13 @@
       @click="handleClick"
     ></g-button>
 
-    <g-button kind="error" prefix-icon="fa fa-plus-square" size="large" circle @click="handleClick"></g-button>
+    <g-button
+      kind="danger"
+      prefix-icon="fa fa-plus-square"
+      size="large"
+      circle
+      @click="handleClick"
+    ></g-button>
   </div>
 
   <div class="g-button__wrap">
@@ -161,7 +204,8 @@
       size="medium"
       ghost
       @click="handleClick"
-    >default</g-button>
+      >default</g-button
+    >
 
     <g-button
       kind="primary"
@@ -169,7 +213,8 @@
       size="medium"
       ghost
       @click="handleClick"
-    >primary</g-button>
+      >primary</g-button
+    >
 
     <g-button
       kind="secondary"
@@ -177,7 +222,8 @@
       size="medium"
       ghost
       @click="handleClick"
-    >secondary</g-button>
+      >secondary</g-button
+    >
 
     <g-button
       kind="success"
@@ -185,7 +231,8 @@
       size="medium"
       ghost
       @click="handleClick"
-    >success</g-button>
+      >success</g-button
+    >
 
     <g-button
       kind="warning"
@@ -193,15 +240,17 @@
       size="medium"
       ghost
       @click="handleClick"
-    >warning</g-button>
+      >warning</g-button
+    >
 
     <g-button
-      kind="error"
+      kind="danger"
       prefix-icon="fa fa-plus-square"
       size="medium"
       ghost
       @click="handleClick"
-    >error</g-button>
+      >danger</g-button
+    >
   </div>
 
   <div class="g-button__wrap">
@@ -213,7 +262,8 @@
       size="medium"
       link
       @click="handleClick"
-    >default</g-button>
+      >default</g-button
+    >
 
     <g-button
       kind="primary"
@@ -221,7 +271,8 @@
       size="medium"
       link
       @click="handleClick"
-    >primary</g-button>
+      >primary</g-button
+    >
 
     <g-button
       kind="secondary"
@@ -229,7 +280,8 @@
       size="medium"
       link
       @click="handleClick"
-    >secondary</g-button>
+      >secondary</g-button
+    >
 
     <g-button
       kind="success"
@@ -237,7 +289,8 @@
       size="medium"
       link
       @click="handleClick"
-    >success</g-button>
+      >success</g-button
+    >
 
     <g-button
       kind="warning"
@@ -245,15 +298,17 @@
       size="medium"
       link
       @click="handleClick"
-    >warning</g-button>
+      >warning</g-button
+    >
 
     <g-button
-      kind="error"
+      kind="danger"
       prefix-icon="fa fa-plus-square"
       size="medium"
       link
       @click="handleClick"
-    >error</g-button>
+      >danger</g-button
+    >
   </div>
 
   <div class="g-button__wrap">
@@ -276,7 +331,8 @@
       size="medium"
       disabled
       @click="handleClick"
-    >disabled</g-button>
+      >disabled</g-button
+    >
 
     <g-button
       kind="primary"
@@ -284,7 +340,8 @@
       size="medium"
       :skeleton="skeleton"
       @click="handleClick"
-    >skeleton</g-button>
+      >skeleton</g-button
+    >
 
     <g-button
       kind="primary"
@@ -292,7 +349,8 @@
       size="medium"
       loading
       @click="handleClick"
-    >skeleton</g-button>
+      >skeleton</g-button
+    >
 
     <g-button
       kind="primary"
@@ -301,7 +359,8 @@
       circle
       loading
       @click="handleClick"
-    >skeleton</g-button>
+      >skeleton</g-button
+    >
   </div>
 </template>
 
@@ -329,9 +388,9 @@ export default defineComponent({
     return {
       handleClick,
       skeleton,
-      count,
+      count
     };
-  },
+  }
 });
 </script>
 

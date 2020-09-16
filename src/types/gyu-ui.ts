@@ -8,14 +8,14 @@ export enum GYU_UI_BREAKPOINT {
   MD = "md",
   LG = "lg",
   XL = "xl"
-};
+}
 
 export enum GYU_UI_SIZE {
   MINI = "mini",
   SMALL = "small",
   MEDIUM = "medium",
-  LARGE = "large",
-};
+  LARGE = "large"
+}
 
 export enum GYU_UI_KIND {
   DEFAULT = "default",
@@ -23,5 +23,5 @@ export enum GYU_UI_KIND {
   SECONDARY = "secondary",
   SUCCESS = "success",
   WARNING = "warning",
-  ERROR = "error",
-};
+  DANGER = "danger"
+}

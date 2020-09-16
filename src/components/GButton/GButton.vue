@@ -3,7 +3,6 @@
     class="g-button"
     :class="[btnClasses, sizableClasses, statusClasses]"
     :disabled="disabled || loading || skeleton"
-    @click.capture="handleClick"
   >
     <template v-if="!skeleton">
       <span v-if="prefixIcon && !loading" class="button__icon prefix-icon">
@@ -33,7 +32,6 @@ import {
 import { defineComponent, computed } from "vue";
 export default defineComponent({
   name: "g-button",
-  inheritAttrs: false,
   props: {
     ...sizeProps,
     ...kindProps,
@@ -70,7 +68,8 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props, { emit }) {
+  setup(props, { attrs, emit }) {
+    console.log(attrs);
     const { sizableClasses, statusClasses } = useComponentClasses(props);
 
     const btnClasses = computed(
@@ -89,22 +88,11 @@ export default defineComponent({
       return props.loading ? "fa fa-spinner fa-spin" : props.suffixIcon;
     });
 
-    const handleClick = (ev: MouseEvent) => {
-      if (props.disabled || props.loading || props.skeleton) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        ev.stopImmediatePropagation();
-      } else {
-        emit("click", ev);
-      }
-    };
-
     return {
       sizableClasses,
       statusClasses,
       btnClasses,
-      suffixIconClass,
-      handleClick
+      suffixIconClass
     };
   }
 });

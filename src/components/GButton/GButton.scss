@@ -158,7 +158,7 @@
   @include buttonMixin("secondary", $-color-secondary, $-color-secondary, $-color-text-invert, $-color-secondary-active, $-color-secondary-hover, $-color-secondary-focus);
   @include buttonMixin("success", $-color-success, $-color-success, $-color-text-invert, $-color-success-active, $-color-success-hover, $-color-success-focus);
   @include buttonMixin("warning", $-color-warning, $-color-warning, $-color-text-invert, $-color-warning-active, $-color-warning-hover, $-color-warning-focus);
-  @include buttonMixin("error", $-color-error, $-color-error, $-color-text-invert, $-color-error-active, $-color-error-hover, $-color-error-focus);
+  @include buttonMixin("danger", $-color-danger, $-color-danger, $-color-text-invert, $-color-danger-active, $-color-danger-hover, $-color-danger-focus);
 
   /* shape */
   &.is-ghost {
