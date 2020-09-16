@@ -44,18 +44,18 @@ const statusProps = {
 const useComponentClasses = (props: any) => {
   const sizableClasses = computed((): Record<string, boolean> => {
     return {
-      'g-size-mini': props.size === GYU_UI_SIZE.MINI,
-      'g-size-small': props.size === GYU_UI_SIZE.SMALL,
-      'g-size-medium': props.size === GYU_UI_SIZE.MEDIUM,
-      'g-size-large': props.size === GYU_UI_SIZE.LARGE,
+      'g-size--mini': props.size === GYU_UI_SIZE.MINI,
+      'g-size--small': props.size === GYU_UI_SIZE.SMALL,
+      'g-size--medium': props.size === GYU_UI_SIZE.MEDIUM,
+      'g-size--large': props.size === GYU_UI_SIZE.LARGE,
     }
   });
 
   const statusClasses = computed((): Record<string, boolean> => {
     return {
-      'g-status-disabled': props.disabled,
-      'g-status-loading': props.loading,
-      'g-status-skeleton': props.skeleton,
+      'is--disabled': props.disabled,
+      'is--loading': props.loading,
+      'is--skeleton': props.skeleton,
     }
   });
 

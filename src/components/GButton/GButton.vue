@@ -3,7 +3,7 @@
     <span v-if="prefixIcon" class="button__icon prefix-icon">
       <i :class="prefixIcon"></i>
     </span>
-    <span class="button__text">
+    <span v-if="!circle" class="button__text">
       <slot></slot>
     </span>
     <span v-if="suffixIcon && !circle" class="button__icon suffix-icon">

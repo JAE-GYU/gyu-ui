@@ -40,11 +40,27 @@
   </div>
 
   <div class="g-button__wrap">
+    <h2>Button Size</h2>
+    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="mini" @click="handleClick">mini</g-button>
+
+    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="small" @click="handleClick">small</g-button>
+
+    <g-button
+      kind="primary"
+      prefix-icon="fa fa-plus-square"
+      size="medium"
+      @click="handleClick"
+    >medium</g-button>
+
+    <g-button kind="primary" prefix-icon="fa fa-plus-square" size="large" @click="handleClick">large</g-button>
+  </div>
+
+  <div class="g-button__wrap">
     <h2>rounded Button</h2>
     <g-button
       kind="default"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="mini"
       rounded
       @click="handleClick"
     >default</g-button>
@@ -52,7 +68,7 @@
     <g-button
       kind="primary"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="small"
       rounded
       @click="handleClick"
     >primary</g-button>
@@ -68,7 +84,7 @@
     <g-button
       kind="success"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="large"
       rounded
       @click="handleClick"
     >success</g-button>
@@ -111,7 +127,7 @@
     <g-button
       kind="secondary"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="mini"
       circle
       @click="handleClick"
     ></g-button>
@@ -119,7 +135,7 @@
     <g-button
       kind="success"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="small"
       circle
       @click="handleClick"
     ></g-button>
@@ -132,13 +148,7 @@
       @click="handleClick"
     ></g-button>
 
-    <g-button
-      kind="error"
-      prefix-icon="fa fa-plus-square"
-      size="medium"
-      circle
-      @click="handleClick"
-    ></g-button>
+    <g-button kind="error" prefix-icon="fa fa-plus-square" size="large" circle @click="handleClick"></g-button>
   </div>
 
   <div class="g-button__wrap">
@@ -250,7 +260,7 @@
     <g-button
       kind="default"
       prefix-icon="fa fa-plus-square"
-      size="medium"
+      size="large"
       circle
       ghost
       @click="handleClick"
