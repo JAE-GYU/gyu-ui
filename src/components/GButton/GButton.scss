@@ -49,13 +49,13 @@
 
 /* GButton styles */
 .g-button {
-  height: 2rem;
+  height: 2.5rem;
   position: relative;
   text-align: center;
   font-size: .875rem;
   line-height: 1;
   color: #32353A;
-  padding: 0 .5rem;
+  padding: 0 .75rem;
   border: none;
   border-radius: .375rem;
   box-sizing: border-box;  
@@ -101,7 +101,7 @@
   }
 
   &.g-size--small {
-    height: 1.75rem;
+    height: 2rem;
     padding: 0 .75rem;
     border-radius: .25rem;
 
@@ -114,12 +114,12 @@
     }
 
     &.is-circle {
-      width: 1.75rem;
+      width: 2rem;
     }
   }
 
   &.g-size--medium {
-    height: 2.25rem;
+    height: 2.5rem;
     padding: 0 .75rem;
 
     &.is-rounded {      
@@ -131,14 +131,13 @@
     }
 
     &.is-circle {
-      width: 2.25rem;
+      width: 2.5rem;
     }
 
   }
 
   &.g-size--large {
-    height: 2.75rem;
-    font-size: 1rem;    
+    height: 3rem;    
     padding: 0 1rem;
 
     &.is-rounded {      
@@ -150,7 +149,7 @@
     }
 
     &.is-circle {
-      width: 2.75rem;
+      width: 3rem;
     }
   }
 
@@ -180,6 +179,10 @@
   .is-disabled, &:disabled {
     opacity: .7;
     cursor: not-allowed;    
+  }
+
+  &.is-fluid {
+    width: 100% !important;
   }
 
   &.is-skeleton {

@@ -66,6 +66,10 @@ export default defineComponent({
     rounded: {
       type: Boolean,
       default: false
+    },
+    fluid: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, { attrs, emit }) {
@@ -79,6 +83,7 @@ export default defineComponent({
           "is-ghost": props.ghost,
           "is-circle": props.circle,
           "is-rounded": props.rounded,
+          "is-fluid": props.fluid,
           [`g-button--${props.kind}`]: true
         };
       }
