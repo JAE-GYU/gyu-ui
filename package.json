@@ -1,10 +1,12 @@
 {
   "name": "gyu-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/gyu-ui.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name gyu-ui src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
