@@ -3,7 +3,6 @@
     class="g-button"
     :class="[btnClasses, sizableClasses, statusClasses]"
     :disabled="disabled || loading || skeleton"
-    @click.capture="handleClick"
   >
     <template v-if="!skeleton">
       <span v-if="prefixIcon && !loading" class="button__icon prefix-icon">
@@ -69,7 +68,8 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props, { emit }) {
+  setup(props, { attrs, emit }) {
+    console.log(attrs);
     const { sizableClasses, statusClasses } = useComponentClasses(props);
 
     const btnClasses = computed(
