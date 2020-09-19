@@ -1,12 +1,6 @@
 <template>
-  <g-button-group>
-    <g-button size="medium" kind="primary">TEST BUTTON1</g-button>
-    <g-button size="medium" kind="primary">TEST BUTTON2</g-button>
-    <g-button size="medium" kind="primary">TEST BUTTON3</g-button>
-    <g-button size="medium" kind="primary">TEST BUTTON4</g-button>
-  </g-button-group>
+  <g-input placeholder="Username" v-model="inputVal"></g-input>
 </template>
-
 <script lang="ts">
 import { defineComponent, ref, onMounted } from "vue";
 
@@ -14,6 +8,8 @@ export default defineComponent({
   name: "App",
   setup() {
     const count = ref(0);
+
+    const inputVal = ref("");
 
     const handleClick = (e: MouseEvent): void => {
       count.value += 1;
@@ -31,7 +27,8 @@ export default defineComponent({
     return {
       handleClick,
       skeleton,
-      count
+      count,
+      inputVal
     };
   }
 });

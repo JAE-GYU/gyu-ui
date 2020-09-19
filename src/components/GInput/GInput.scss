@@ -1,0 +1,28 @@
+@import "@/globals/gyu_colors.scss";
+
+.g-input__wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  .g-input__label-text {
+    color: $-color-text-lighten-10;
+    text-align: left;
+    flex-basis: 100%;
+    font-size: .75rem;
+    margin-bottom: .375rem;
+    transition: .2s;    
+    background: #fff;
+  }  
+
+  .g-input__inner {
+    flex-basis: 100%;
+    height: calc(2.5rem);
+    font-size: .875rem;
+    color: $-color-text;  
+    padding: .25rem .75rem 0 .75rem;
+    box-sizing: border-box;    
+    border: 1px solid $-color-default-darken-10;
+    border-radius: .375rem;
+    outline-color: $-color-primary-lighten-05;    
+  }  
+}
