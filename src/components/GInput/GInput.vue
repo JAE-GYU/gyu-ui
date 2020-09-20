@@ -1,6 +1,6 @@
 <template>
   <label class="g-input__wrap" :class="inputClasses">
-    <span class="g-input__label-text">Username</span>
+    <span class="g-input__label-text" v-if="label">{{ label }}</span>
     <input
       v-bind="attrs"
       class="g-input__inner"
@@ -12,18 +12,14 @@
 
 <script lang="ts">
 import "./GInput.scss";
+import { inputProps } from "@/composables/formComponent";
 
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, computed } from "vue";
 export default defineComponent({
   name: "g-input",
   inheritAttrs: false,
   props: {
-    modelValue: String,
-    placeholder: String,
-    innerLabel: {
-      type: Boolean,
-      default: true
-    }
+    ...inputProps
   },
   setup(props, { emit, attrs }) {
     const inputValue = computed({
@@ -34,8 +30,7 @@ export default defineComponent({
     const inputClasses = computed(
       (): Record<string, boolean> => {
         return {
-          "is-inner-label": props.innerLabel,
-          "is-empty": !props.modelValue
+          [`label-${props.labelPosition}`]: true
         };
       }
     );

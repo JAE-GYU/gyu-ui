@@ -1,5 +1,12 @@
 <template>
-  <g-input placeholder="Username" v-model="inputVal"></g-input>
+  <div class="input-group">
+    <g-input
+      placeholder="Username"
+      v-model="inputVal"
+      label="Username"
+      label-position="top"
+    ></g-input>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref, onMounted } from "vue";
@@ -44,7 +51,8 @@ export default defineComponent({
   margin-top: 60px;
 }
 
-.g-button__wrap .g-button {
-  margin: 0 8px;
+.input-group .g-input__wrap {
+  vertical-align: bottom;
+  margin-left: 0.5rem;
 }
 </style>

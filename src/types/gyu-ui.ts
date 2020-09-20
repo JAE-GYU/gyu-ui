@@ -2,7 +2,7 @@ export interface GyuUIOptions {
   components: Array<string>;
 }
 
-export enum GYU_UI_BREAKPOINT {
+export enum GyuUIBreakpoint {
   XS = "xs",
   SM = "sm",
   MD = "md",
@@ -10,14 +10,14 @@ export enum GYU_UI_BREAKPOINT {
   XL = "xl"
 }
 
-export enum GYU_UI_SIZE {
+export enum GyuUISize {
   MINI = "mini",
   SMALL = "small",
   MEDIUM = "medium",
   LARGE = "large"
 }
 
-export enum GYU_UI_KIND {
+export enum GyuUIKind {
   DEFAULT = "default",
   PRIMARY = "primary",
   SECONDARY = "secondary",

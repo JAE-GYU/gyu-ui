@@ -1,23 +1,23 @@
 import { PropType, computed } from "vue";
-import { GYU_UI_SIZE, GYU_UI_KIND } from "@/types/gyu-ui";
+import { GyuUISize, GyuUIKind } from "@/types/gyu-ui";
 
 /* props */
 const kindProps = {
   kind: {
-    type: String as PropType<GYU_UI_KIND>,
+    type: String as PropType<GyuUIKind>,
     default: "default",
-    validator: (val: GYU_UI_KIND) => {
-      return Object.values(GYU_UI_KIND).includes(val);
+    validator: (val: GyuUIKind) => {
+      return Object.values(GyuUIKind).includes(val);
     }
   }
 };
 
 const sizeProps = {
   size: {
-    type: String as PropType<GYU_UI_SIZE>,
+    type: String as PropType<GyuUISize>,
     default: "medium",
-    validator: (val: GYU_UI_SIZE) => {
-      return Object.values(GYU_UI_SIZE).includes(val);
+    validator: (val: GyuUISize) => {
+      return Object.values(GyuUISize).includes(val);
     }
   }
 };
@@ -42,10 +42,10 @@ const useComponentClasses = (props: any) => {
   const sizableClasses = computed(
     (): Record<string, boolean> => {
       return {
-        "g-size--mini": props.size === GYU_UI_SIZE.MINI,
-        "g-size--small": props.size === GYU_UI_SIZE.SMALL,
-        "g-size--medium": props.size === GYU_UI_SIZE.MEDIUM,
-        "g-size--large": props.size === GYU_UI_SIZE.LARGE
+        "g-size--mini": props.size === GyuUISize.MINI,
+        "g-size--small": props.size === GyuUISize.SMALL,
+        "g-size--medium": props.size === GyuUISize.MEDIUM,
+        "g-size--large": props.size === GyuUISize.LARGE
       };
     }
   );
