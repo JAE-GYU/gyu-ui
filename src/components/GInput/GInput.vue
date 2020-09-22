@@ -30,6 +30,7 @@ export default defineComponent({
     const inputClasses = computed(
       (): Record<string, boolean> => {
         return {
+          "is-fluid": props.fluid,
           [`label-${props.labelPosition}`]: true
         };
       }

@@ -31,6 +31,10 @@ const inputProps = {
     validator: (val: LabelPosition) => {
       return Object.values(LabelPosition).includes(val);
     }
+  },
+  fluid: {
+    type: Boolean,
+    default: false
   }
 };
 

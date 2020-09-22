@@ -44,5 +44,10 @@
     border-radius: .375rem;
     outline-color: $-color-primary-lighten-05;    
     transition: .2s;
-  }  
+  }
+
+  &.is-fluid, &.is-fluid .g-input__inner {
+    width: 100%;
+    flex-basis: 100%;
+  }
 }

@@ -5,6 +5,7 @@
       v-model="inputVal"
       label="Username"
       label-position="top"
+      fluid
     ></g-input>
   </div>
 </template>
@@ -53,6 +54,6 @@ export default defineComponent({
 
 .input-group .g-input__wrap {
   vertical-align: bottom;
-  margin-left: 0.5rem;
+  box-sizing: border-box;
 }
 </style>
