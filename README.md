@@ -2,7 +2,7 @@
 Vue 3 + Typescript UI Component
 
 ## GButton
-button 
+![screencapture](./example/GButton.png)
 
 ## GInput
 input
